@@ -12,6 +12,21 @@ include("Copier.jl")
 
 using TOML: TOML
 
+function _deprecation_notice()
+  @error """The template has been renamed to BestieTemplate.jl,
+  please uninstall this package and install that instead:
+
+  pkg> rm COPIERTemplate
+  pkg> add BestieTemplate
+  # Open .copier-answers.yml and rename COPIERTemplate to BestieTemplate
+  # git commit
+
+  Next time you update it will use the new repo.
+  This package should still work for a while (and is using the BestieTemplate URL),
+  but please upgrade.
+  """
+end
+
 """
     generate(dst_path[, data]; kwargs...)
     generate(src_path, dst_path[, data]; true, kwargs...)
@@ -28,6 +43,7 @@ The `data` argument is a dictionary of answers (values) to questions (keys) that
 The other keyword arguments are passed directly to the internal [`Copier.copy`](@ref).
 """
 function generate(src_path, dst_path, data::Dict = Dict(); warn_existing_pkg = true, kwargs...)
+  _deprecation_notice()
   if warn_existing_pkg && isfile(joinpath(dst_path, ".copier-answers.yml"))
     @warn """There already exists a `.copier-answers.yml` file in the destination path.
     You might have meant to use `COPIERTemplate.update` instead, which only fetches the non-applying updates.
@@ -62,7 +78,7 @@ function generate(src_path, dst_path, data::Dict = Dict(); warn_existing_pkg = t
 end
 
 function generate(dst_path, data::Dict = Dict(); kwargs...)
-  generate("https://github.com/abelsiqueira/COPIERTemplate.jl", dst_path, data; kwargs...)
+  generate("https://github.com/abelsiqueira/BestieTemplate.jl", dst_path, data; kwargs...)
 end
 
 """
@@ -78,6 +94,7 @@ The `data` argument is a dictionary of answers (values) to questions (keys) that
 The keyword arguments are passed directly to the internal [`Copier.update`](@ref).
 """
 function update(dst_path, data::Dict = Dict(); kwargs...)
+  _deprecation_notice()
   Copier.update(dst_path, data; overwrite = true, kwargs...)
 end
 

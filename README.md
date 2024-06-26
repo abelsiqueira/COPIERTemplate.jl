@@ -2,7 +2,7 @@
   <img src="docs/src/assets/logo-wide.png" alt="COPIERTemplate.jl">
 </p>
 
-# Copier OPInionated Evolving Reusable Template
+# ARCHIVED: Forked to [BestieTemplate.jl](https://github.com/abelsiqueira/BestieTemplate.jl) - Copier OPInionated Evolving Reusable Template
 
 <div align="center">
 

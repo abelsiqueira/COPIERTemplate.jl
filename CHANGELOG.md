@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning].
 
 ## [Unreleased]
 
+### Changed
+
+- Archive this package and fork to BestieTemplate.jl
+
 ## [0.6.1] - 2024-06-21
 
 ### Changed

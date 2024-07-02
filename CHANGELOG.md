@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning].
 
 ## [Unreleased]
 
+## [0.7.0] - 2024-07-02
+
 ### Changed
 
 - Archive this package and fork to BestieTemplate.jl
@@ -272,7 +274,8 @@ and this project adheres to [Semantic Versioning].
 
 <!-- Versions -->
 
-[unreleased]: https://github.com/abelsiqueira/COPIERTemplate.jl/compare/v0.6.1...HEAD
+[unreleased]: https://github.com/abelsiqueira/COPIERTemplate.jl/compare/v0.7.0...HEAD
+[0.7.0]: https://github.com/abelsiqueira/COPIERTemplate.jl/releases/tag/v0.7.0
 [0.6.1]: https://github.com/abelsiqueira/COPIERTemplate.jl/releases/tag/v0.6.1
 [0.6.0]: https://github.com/abelsiqueira/COPIERTemplate.jl/releases/tag/v0.6.0
 [0.5.4]: https://github.com/abelsiqueira/COPIERTemplate.jl/releases/tag/v0.5.4
